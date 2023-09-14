@@ -1,6 +1,6 @@
 import cv2 as cv
 
-image = cv.imread("../../Opgave E/Dolphin.jpg")
+image = cv.imread("../Opgave E/Dolphin.jpg")
 image1 = image.copy()
 
 image1[200,200] = (0,0,255)

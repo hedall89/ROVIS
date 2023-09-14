@@ -9,7 +9,7 @@ color = (0,0,255)
 thickness = 2
 
 copy = cv.circle(copy,center_coordinater,radius,color,thickness)
-cv.imwrite("red_circle.png",copy)
+cv.imwrite("red_circle.png", copy)
 
 
 
