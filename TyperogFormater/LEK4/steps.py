@@ -1,20 +1,18 @@
 import cv2
-import numpy
+import numpy as np
+
+mask = np.array(([1,1,1],
+                 [1,10,1],
+                 [1,1,1]))*1/18
+
+img = cv2.imread("ladybug.png")
+img_copy = img.copy()
+
+img_filter = cv2.filter2D(img_copy, -1, mask)
 
 
-threshold = 127
-def binary(input_intensity, threshold):
-    if input_intensity < threshold:
-        output_intensity = 0
-    else:
-        output_intensity = 255
-
-    return output_intensity
-
-
-
-
-binary_vectorized = numpy.vectorize(binary)
-
+cv2.imshow("org", img)
+cv2.imshow("Mask", img_filter)
+cv2.waitKey(0)
 
 
